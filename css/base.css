@@ -1,0 +1,44 @@
+/* ========== BASE.CSS · WISEWATCH ==========
+   ESTILOS DE ETIQUETAS NATIVAS (reset personalizado)
+   Última actualización: 12 febrero 2026
+============================================== */
+
+/* ---------------------------------------------
+   1. RESET Y ESTILOS BASE (sobre Tailwind Preflight)
+   Solo etiquetas HTML nativas, sin clases personalizadas
+--------------------------------------------- */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Crimson Text', serif;
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+/* ---------------------------------------------
+   NO SE INCLUYEN COMPONENTES PERSONALIZADOS
+   Este archivo contiene EXCLUSIVAMENTE estilos de etiquetas nativas.
+   Los componentes como .monogram, .watch-card, .hero-section, etc.
+   deben ir en un archivo separado (components.css)
+--------------------------------------------- */

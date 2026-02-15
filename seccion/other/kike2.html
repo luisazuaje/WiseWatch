@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kike Mujica · Dirección de Fotografía & Técnico Audiovisual</title>
+    <!-- Tailwind CSS v3 via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Tipografías personalizadas (Google Fonts) -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #0a1928 0%, #0f2a3a 100%);
+            color: #f0f0f0;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+        }
+
+        /* Efecto de telón */
+        .curtain-top {
+            position: relative;
+        }
+
+        .curtain-top::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 8px;
+            background: linear-gradient(90deg, #d4af37 0%, #f5e7c8 50%, #d4af37 100%);
+            box-shadow: 0 2px 10px rgba(212, 175, 55, 0.5);
+        }
+
+        .curtain-bottom {
+            position: relative;
+        }
+
+        .curtain-bottom::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 8px;
+            background: linear-gradient(90deg, #d4af37 0%, #f5e7c8 50%, #d4af37 100%);
+            box-shadow: 0 -2px 10px rgba(212, 175, 55, 0.5);
+        }
+
+        /* Textura de fondo de escenario (adaptada a azul) */
+        .stage-texture {
+            background-image:
+                linear-gradient(rgba(10, 25, 40, 0.9), rgba(15, 42, 58, 0.9)),
+                repeating-linear-gradient(45deg, #1e3a4a 0px, #1e3a4a 2px, #16323f 2px, #16323f 8px);
+        }
+
+        .gold-glow {
+            text-shadow: 0 0 8px rgba(212, 175, 55, 0.6);
+        }
+
+        .card-theater {
+            background: rgba(20, 40, 55, 0.9);
+            border-left: 4px solid #d4af37;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card-theater:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 30px -10px rgba(212, 175, 55, 0.3);
+        }
+
+        .btn-gold {
+            background: linear-gradient(135deg, #d4af37 0%, #b49450 100%);
+            color: #0a1928;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .btn-gold:hover {
+            background: linear-gradient(135deg, #e4c35a 0%, #c4a55a 100%);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.7);
+            color: #000;
+        }
+
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .photo-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .photo-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .photo-item {
+            overflow: hidden;
+            border-radius: 4px;
+            border: 1px solid #d4af3740;
+            transition: all 0.3s;
+        }
+
+        .photo-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.6s;
+        }
+
+        .photo-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .skill-tag {
+            background: rgba(212, 175, 55, 0.1);
+            border: 1px solid #d4af37;
+            color: #f0f0f0;
+            padding: 0.5rem 1.2rem;
+            border-radius: 40px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .skill-tag:hover {
+            background: #d4af37;
+            color: #0a1928;
+        }
+
+        .skill-tag i {
+            color: #d4af37;
+            transition: color 0.2s;
+        }
+
+        .skill-tag:hover i {
+            color: #0a1928;
+        }
+    </style>
+</head>
+
+<body class="stage-texture text-gray-200 antialiased">
+
+    <!-- ========== NAVEGACIÓN ========== -->
+    <nav class="curtain-bottom fixed top-0 w-full z-50 bg-[#0a1928]/80 backdrop-blur-sm border-b border-[#d4af37]/30">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold font-serif gold-glow text-[#d4af37]">Kike Mujica</a>
+            <div class="space-x-8 hidden md:block">
+                <a href="#inicio" class="hover:text-[#d4af37] transition">Inicio</a>
+                <a href="#trayectoria" class="hover:text-[#d4af37] transition">Trayectoria</a>
+                <a href="#filosofia" class="hover:text-[#d4af37] transition">Filosofía</a>
+                <a href="#habilidades" class="hover:text-[#d4af37] transition">Habilidades</a>
+                <a href="#contacto" class="hover:text-[#d4af37] transition">Contacto</a>
+            </div>
+            <div class="md:hidden">
+                <i class="fas fa-bars text-[#d4af37] text-2xl"></i>
+            </div>
+        </div>
+    </nav>
+    <div class="h-20"></div>
+
+    <!-- ========== HERO ========== -->
+    <section id="inicio" class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 bg-cover bg-center"
+            style="background-image: url('https://img.freepik.com/foto-gratis/vista-superior-camara-fotos-interior-naturaleza-muerta_23-2150630615.jpg?semt=ais_wordcount_boost&w=740&q=80');">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-b from-[#0a1928]/80 to-[#0f2a3a]/90"></div>
+        <div class="absolute top-0 left-0 h-full w-24 bg-gradient-to-r from-[#0a1928]/90 to-transparent"></div>
+        <div class="absolute top-0 right-0 h-full w-24 bg-gradient-to-l from-[#0a1928]/90 to-transparent"></div>
+
+        <div class="container relative mx-auto px-6 text-center z-10">
+            <span
+                class="inline-block px-4 py-2 border border-[#d4af37] text-[#d4af37] text-sm uppercase tracking-[0.3em] mb-6">Director
+                de Fotografía</span>
+            <h1 class="text-6xl md:text-8xl font-bold font-serif text-white leading-tight gold-glow">
+                Kike <span class="text-[#d4af37]">Mujica</span>
+            </h1>
+            <p class="text-xl md:text-2xl max-w-3xl mx-auto mt-6 text-gray-300">
+                Construyo atmósferas que cuentan historias. <br class="hidden md:block"> La imagen como lenguaje
+                universal.
+            </p>
+            <div class="flex flex-wrap gap-6 justify-center mt-10">
+                <a href="#trayectoria" class="btn-gold px-8 py-4 rounded-full font-semibold text-lg shadow-xl">Descubrir
+                    mi mundo</a>
+                <a href="#contacto"
+                    class="border border-[#d4af37] px-8 py-4 rounded-full font-semibold text-lg hover:bg-[#d4af37] hover:text-[#0a1928] transition">Conversemos</a>
+            </div>
+            <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+                <i class="fas fa-chevron-down text-[#d4af37] text-2xl"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== PERFIL / BIO ========== -->
+    <section class="py-24 bg-[#0f2a3a] curtain-top curtain-bottom">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <span class="text-[#d4af37] text-sm tracking-[0.3em] uppercase">Quién soy</span>
+                    <h2 class="text-4xl md:text-5xl font-serif font-bold mt-4 mb-6">Pasión, técnica y <span
+                            class="text-[#d4af37]">alma</span></h2>
+                    <p class="text-lg text-gray-300 leading-relaxed">
+                        Fotógrafo profesional y técnico audiovisual con más de <span class="font-bold text-[#d4af37]">12
+                            años de experiencia</span> transformando espacios y narrativas en experiencias sensoriales
+                        inolvidables. Mi trabajo es un puente entre la técnica y el arte; no me limito a capturar
+                        imágenes u operar equipos, sino que construyo atmósferas que cuentan historias.
+                    </p>
+                    <p class="text-lg text-gray-300 leading-relaxed mt-4">
+                        Mi filosofía se basa en la convicción de que una imagen es un acto de comunicación universal,
+                        capaz de trascender fronteras y barreras idiomáticas. Como venezolano, llevo en mi sangre la
+                        pasión, la resiliencia y la creatividad para resolver y crear belleza en cualquier contexto.
+                    </p>
+                    <p class="text-lg text-gray-300 leading-relaxed mt-4">
+                        <span class="text-[#d4af37] font-semibold">Minucioso y detallista</span>, dedico cada proyecto a
+                        realzar la intención y proyección de cada cliente, convirtiendo escenarios en auténticos pasajes
+                        de ensueño.
+                    </p>
+                    <div class="mt-8 space-y-3">
+                        <div class="flex items-center gap-4"><i
+                                class="fas fa-map-marker-alt text-[#d4af37] w-5"></i><span>Caracas, Venezuela</span>
+                        </div>
+                        <div class="flex items-center gap-4"><i
+                                class="fas fa-phone-alt text-[#d4af37] w-5"></i><span>+58 (424) 123-4567</span></div>
+                        <div class="flex items-center gap-4"><i
+                                class="fas fa-envelope text-[#d4af37] w-5"></i><span>kike.mujica@email.com</span></div>
+                        <div class="flex items-center gap-4"><i
+                                class="fas fa-globe text-[#d4af37] w-5"></i><span>www.kikemujicafoto.com</span></div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div
+                        class="aspect-[3/4] bg-gradient-to-br from-[#d4af37]/20 to-transparent border border-[#d4af37]/30 p-2 rounded-sm">
+                        <img src="https://i.pinimg.com/1200x/ed/bc/ef/edbceff5b8e2c33a3c78db336b81eac7.jpg"
+                            alt="Kike Mujica trabajando"
+                            class="w-full h-full object-cover rounded-sm grayscale hover:grayscale-0 transition duration-700">
+                    </div>
+                    <div class="absolute -top-6 -right-6 w-32 h-32 rounded-full bg-[#d4af37]/20 blur-3xl"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== EXPERIENCIA DESTACADA ========== -->
+    <section class="py-24 bg-[#0a1928]">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-[#d4af37] text-sm tracking-[0.3em] uppercase">Trayectoria</span>
+                <h2 class="text-4xl md:text-5xl font-serif font-bold mt-4">Experiencia que <span
+                        class="text-[#d4af37]">ilumina</span></h2>
+                <div class="w-24 h-1 bg-[#d4af37] mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="card-theater p-8 rounded-sm">
+                    <i class="fas fa-mask text-4xl text-[#d4af37] mb-4"></i>
+                    <h3 class="text-2xl font-serif font-bold mb-3">Director de Fotografía & Técnico Audiovisual</h3>
+                    <p class="text-sm text-[#d4af37] mb-2">Freelance · 2015 - Presente</p>
+                    <ul class="space-y-2 text-gray-300">
+                        <li class="flex items-start gap-3"><i
+                                class="fas fa-check-circle text-[#d4af37] mt-1"></i><span>Gestión integral de
+                                producciones teatrales: operación y programación de equipos escenográficos, audio y
+                                video.</span></li>
+                        <li class="flex items-start gap-3"><i
+                                class="fas fa-check-circle text-[#d4af37] mt-1"></i><span>Dirección de fotografía en
+                                espectáculos: diseño de iluminación y captura audiovisual para eventos en vivo.</span>
+                        </li>
+                        <li class="flex items-start gap-3"><i
+                                class="fas fa-check-circle text-[#d4af37] mt-1"></i><span>Producción y postproducción
+                                especializada (edición, color grading, sonido).</span></li>
+                        <li class="flex items-start gap-3"><i
+                                class="fas fa-check-circle text-[#d4af37] mt-1"></i><span>Fotografía comercial y de
+                                autor, con enfoque en comunicación visual.</span></li>
+                    </ul>
+                </div>
+                <div class="card-theater p-8 rounded-sm">
+                    <i class="fas fa-theater-masks text-4xl text-[#d4af37] mb-4"></i>
+                    <h3 class="text-2xl font-serif font-bold mb-3">Operador de Equipos Audiovisuales</h3>
+                    <p class="text-sm text-[#d4af37] mb-2">Teatro Escena · 2018 - 2023</p>
+                    <ul class="space-y-2 text-gray-300">
+                        <li class="flex items-start gap-3"><i
+                                class="fas fa-check-circle text-[#d4af37] mt-1"></i><span>Manejo de consolas de sonido,
+                                mesas de luces DMX y equipos de video proyección.</span></li>
+                        <li class="flex items-start gap-3"><i
+                                class="fas fa-check-circle text-[#d4af37] mt-1"></i><span>Diseño de iluminación
+                                escénica, colaborando en la conceptualización de la puesta en escena.</span></li>
+                        <li class="flex items-start gap-3"><i
+                                class="fas fa-check-circle text-[#d4af37] mt-1"></i><span>Mantenimiento y configuración
+                                de equipos técnicos para garantizar su óptimo funcionamiento.</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mt-20">
+                <h3 class="text-3xl font-serif text-center mb-10">Proyectos que <span
+                        class="text-[#d4af37]">marcan</span></h3>
+                <div class="photo-grid">
+                    <div class="photo-item"><img
+                            src="https://i.pinimg.com/1200x/80/fa/eb/80faeb090abb3b73bf239bad58922048.jpg"
+                            alt="Obra teatral"></div>
+                    <div class="photo-item"><img
+                            src="https://wallpapers.com/images/hd/wet-floor-shooting-photography-camera-ibyvntjigxyvxeec.jpg"
+                            alt="Concierto iluminación"></div>
+                    <div class="photo-item"><img
+                            src="https://static.vecteezy.com/system/resources/thumbnails/071/779/173/small/sound-engineer-working-in-a-recording-studio-music-production-concept-photo.jpg"
+                            alt="Retrato artístico"></div>
+                    <div class="photo-item"><img
+                            src="https://images.pexels.com/photos/3379934/pexels-photo-3379934.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                            alt="Detrás de cámaras"></div>
+                    <div class="photo-item"><img
+                            src="https://wallpapers.com/images/hd/cameraman-capturing-sunsetat-waterfall-kbfeuul9ht5cexh9.jpg"
+                            alt="Set de filmación"></div>
+                    <div class="photo-item"><img
+                            src="https://wallpapers.com/images/hd/black-and-white-movie-1920-x-1080-wallpaper-w1ri39mpc278w59o.jpg"
+                            alt="Fotografía de producto"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FILOSOFÍA Y VALORES ========== -->
+    <section id="filosofia" class="py-24 bg-[#0f2a3a] curtain-top curtain-bottom">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-[#d4af37] text-sm tracking-[0.3em] uppercase">Mi credo</span>
+                <h2 class="text-4xl md:text-5xl font-serif font-bold mt-4">Filosofía & <span
+                        class="text-[#d4af37]">Valores</span></h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div
+                    class="bg-[#0a1928]/60 p-8 border-t border-[#d4af37] text-center group hover:bg-[#d4af37]/10 transition">
+                    <i class="fas fa-language text-5xl text-[#d4af37] mb-4"></i>
+                    <h3 class="text-xl font-serif font-bold mb-3">Lenguaje Universal</h3>
+                    <p class="text-gray-400 text-sm">La imagen trasciende palabras. Cada fotografía es un puente directo
+                        al alma, sin fronteras.</p>
+                </div>
+                <div
+                    class="bg-[#0a1928]/60 p-8 border-t border-[#d4af37] text-center group hover:bg-[#d4af37]/10 transition">
+                    <i class="fas fa-search text-5xl text-[#d4af37] mb-4"></i>
+                    <h3 class="text-xl font-serif font-bold mb-3">Detallismo</h3>
+                    <p class="text-gray-400 text-sm">La excelencia está en los detalles. Desde la luz hasta el color,
+                        todo calibrado para servir a la historia.</p>
+                </div>
+                <div
+                    class="bg-[#0a1928]/60 p-8 border-t border-[#d4af37] text-center group hover:bg-[#d4af37]/10 transition">
+                    <i class="fas fa-heart text-5xl text-[#d4af37] mb-4"></i>
+                    <h3 class="text-xl font-serif font-bold mb-3">Pasión & Comunicación</h3>
+                    <p class="text-gray-400 text-sm">Mi motor es realzar el arte a través de la comunicación visual. Ser
+                        parte de la creación de belleza.</p>
+                </div>
+                <div
+                    class="bg-[#0a1928]/60 p-8 border-t border-[#d4af37] text-center group hover:bg-[#d4af37]/10 transition">
+                    <i class="fas fa-handshake text-5xl text-[#d4af37] mb-4"></i>
+                    <h3 class="text-xl font-serif font-bold mb-3">Compromiso</h3>
+                    <p class="text-gray-400 text-sm">Soy el puente entre la visión creativa y la realidad técnica. Mi
+                        responsabilidad es con la excelencia.</p>
+                </div>
+            </div>
+
+            <div class="mt-20 max-w-3xl mx-auto text-center p-8 border-l-4 border-[#d4af37] bg-[#0a1928]/60">
+                <i class="fas fa-quote-left text-4xl text-[#d4af37] opacity-50 mb-4"></i>
+                <p class="text-2xl italic font-serif text-gray-300">"No hay nada más excelso que ser parte de la
+                    creación de belleza y emoción, y poder compartirla con el mundo."</p>
+                <p class="mt-4 text-[#d4af37]">— Kike Mujica</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== HABILIDADES CLAVE ========== -->
+    <section id="habilidades" class="py-24 bg-[#0a1928]">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-[#d4af37] text-sm tracking-[0.3em] uppercase">Dominio técnico</span>
+                <h2 class="text-4xl md:text-5xl font-serif font-bold mt-4">Habilidades que <span
+                        class="text-[#d4af37]">iluminan</span></h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-serif mb-6 text-[#d4af37]">Fotografía</h3>
+                    <div class="flex flex-wrap gap-3 mb-8">
+                        <span class="skill-tag"><i class="fas fa-camera"></i> Retrato</span>
+                        <span class="skill-tag"><i class="fas fa-calendar-alt"></i> Eventos</span>
+                        <span class="skill-tag"><i class="fas fa-theater-masks"></i> Fotografía Teatral</span>
+                        <span class="skill-tag"><i class="fas fa-cube"></i> Producto</span>
+                        <span class="skill-tag"><i class="fas fa-paint-brush"></i> Dirección de Arte</span>
+                    </div>
+
+                    <h3 class="text-2xl font-serif mb-6 text-[#d4af37]">Audiovisuales</h3>
+                    <div class="flex flex-wrap gap-3 mb-8">
+                        <span class="skill-tag"><i class="fas fa-video"></i> Operación de Cámara</span>
+                        <span class="skill-tag"><i class="fas fa-edit"></i> Edición (Premiere, DaVinci)</span>
+                        <span class="skill-tag"><i class="fas fa-wifi"></i> Streaming</span>
+                    </div>
+
+                    <h3 class="text-2xl font-serif mb-6 text-[#d4af37]">Iluminación</h3>
+                    <div class="flex flex-wrap gap-3 mb-8">
+                        <span class="skill-tag"><i class="fas fa-lightbulb"></i> Diseño Escénico</span>
+                        <span class="skill-tag"><i class="fas fa-sliders-h"></i> Consolas DMX</span>
+                        <span class="skill-tag"><i class="fas fa-palette"></i> Geles y Efectos</span>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-2xl font-serif mb-6 text-[#d4af37]">Sonido</h3>
+                    <div class="flex flex-wrap gap-3 mb-8">
+                        <span class="skill-tag"><i class="fas fa-microphone-alt"></i> Consolas Análogas/Digitales</span>
+                        <span class="skill-tag"><i class="fas fa-headphones"></i> Microfonía</span>
+                        <span class="skill-tag"><i class="fas fa-music"></i> Mezcla en Vivo</span>
+                    </div>
+
+                    <h3 class="text-2xl font-serif mb-6 text-[#d4af37]">Postproducción</h3>
+                    <div class="flex flex-wrap gap-3 mb-8">
+                        <span class="skill-tag"><i class="fas fa-adjust"></i> Photoshop / Lightroom</span>
+                        <span class="skill-tag"><i class="fas fa-adjust"></i> Capture One</span>
+                        <span class="skill-tag"><i class="fas fa-paint-roller"></i> Color grading</span>
+                    </div>
+
+                    <h3 class="text-2xl font-serif mb-6 text-[#d4af37]">Formación</h3>
+                    <div class="space-y-4">
+                        <p class="border-b border-gray-600 pb-2"><span class="text-[#d4af37]">Título
+                                Universitario:</span> Licenciatura en Cine y Fotografía, Universidad Central de
+                            Venezuela</p>
+                        <p class="border-b border-gray-600 pb-2"><span class="text-[#d4af37]">Talleres:</span> Edición
+                            avanzada, Colorimetría, Iluminación para cine, Diseño sonoro.</p>
+                        <p><span class="text-[#d4af37]">Idiomas:</span> Español (nativo), Inglés (intermedio técnico)
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== TESTIMONIOS ========== -->
+    <section class="py-24 bg-[#0f2a3a]">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-[#d4af37] text-sm tracking-[0.3em] uppercase">Lo que dicen</span>
+                <h2 class="text-4xl md:text-5xl font-serif font-bold mt-4">Voces que <span
+                        class="text-[#d4af37]">confían</span></h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-[#0a1928]/60 p-6 rounded border-l-2 border-[#d4af37]">
+                    <i class="fas fa-star text-[#d4af37] mb-4"></i>
+                    <p class="text-gray-300 italic">"Kike transformó por completo la iluminación de nuestra obra. Su
+                        sensibilidad artística y técnica son excepcionales."</p>
+                    <p class="mt-4 font-bold">— Laura Mendoza, Directora teatral</p>
+                </div>
+                <div class="bg-[#0a1928]/60 p-6 rounded border-l-2 border-[#d4af37]">
+                    <i class="fas fa-star text-[#d4af37] mb-4"></i>
+                    <p class="text-gray-300 italic">"Un profesional que entiende la narrativa visual como pocos. Cada
+                        proyecto con él es una experiencia única."</p>
+                    <p class="mt-4 font-bold">— Carlos Rivas, Productor</p>
+                </div>
+                <div class="bg-[#0a1928]/60 p-6 rounded border-l-2 border-[#d4af37]">
+                    <i class="fas fa-star text-[#d4af37] mb-4"></i>
+                    <p class="text-gray-300 italic">"Su capacidad para resolver problemas en vivo es increíble. Además,
+                        su ojo para el color y la composición es impecable."</p>
+                    <p class="mt-4 font-bold">— Sofía Castillo, Fotógrafa</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CONTACTO ========== -->
+    <section id="contacto" class="py-24 bg-[#0a1928] relative overflow-hidden">
+        <div class="absolute -top-20 -left-20 w-64 h-64 bg-[#d4af37]/10 rounded-full blur-3xl"></div>
+        <div class="absolute -bottom-20 -right-20 w-64 h-64 bg-[#d4af37]/10 rounded-full blur-3xl"></div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-3xl mx-auto text-center">
+                <span class="text-[#d4af37] text-sm tracking-[0.3em] uppercase">Conectemos</span>
+                <h2 class="text-4xl md:text-5xl font-serif font-bold mt-4 mb-6">¿Listos para crear <span
+                        class="text-[#d4af37]">juntos</span>?</h2>
+                <p class="text-xl text-gray-300 mb-10">Cuéntame tu proyecto y construyamos una narrativa visual
+                    inolvidable.</p>
+
+                <form action="#" method="post" class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <input type="text" placeholder="Nombre"
+                            class="w-full bg-[#0f2a3a]/60 border border-gray-600 rounded-lg px-5 py-4 text-white placeholder-gray-400 focus:border-[#d4af37] focus:outline-none transition">
+                        <input type="email" placeholder="Email"
+                            class="w-full bg-[#0f2a3a]/60 border border-gray-600 rounded-lg px-5 py-4 text-white placeholder-gray-400 focus:border-[#d4af37] focus:outline-none transition">
+                    </div>
+                    <textarea rows="5" placeholder="Cuéntame sobre tu idea..."
+                        class="w-full bg-[#0f2a3a]/60 border border-gray-600 rounded-lg px-5 py-4 text-white placeholder-gray-400 focus:border-[#d4af37] focus:outline-none transition"></textarea>
+                    <button type="submit"
+                        class="btn-gold px-10 py-4 rounded-full font-semibold text-lg shadow-2xl">Enviar mensaje <i
+                            class="fas fa-paper-plane ml-2"></i></button>
+                </form>
+
+                <div class="mt-16 flex flex-wrap justify-center gap-6">
+                    <a href="#" class="text-gray-400 hover:text-[#d4af37] text-2xl transition"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-[#d4af37] text-2xl transition"><i
+                            class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-[#d4af37] text-2xl transition"><i
+                            class="fab fa-vimeo-v"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-[#d4af37] text-2xl transition"><i
+                            class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="border-t border-[#d4af37]/30 py-8 bg-[#0a1928]/90">
+        <div class="container mx-auto px-6 text-center text-gray-400 text-sm">
+            <p>© 2026 Kike Mujica · Director de Fotografía & Técnico Audiovisual Integral · Caracas, Venezuela</p>
+            <p class="mt-2">Todas las imágenes son propiedad de sus respectivos autores. Diseño con alma escénica.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

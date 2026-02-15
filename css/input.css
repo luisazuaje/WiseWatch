@@ -1,0 +1,52 @@
+@import "tailwindcss";
+@import "./base.css";
+@import "./component.css";
+
+/* ========== INPUT.CSS · WISEWATCH ==========
+   Punto de entrada principal para Tailwind CLI
+   Incluye fuentes locales, Tailwind y estilos personalizados
+   Última actualización: 12 febrero 2026
+============================================== */
+
+/* ---------------------------------------------
+   1. FUENTES LOCALES · @font-face
+   Archivos ubicados en ../font/ (carpeta raíz/font)
+   Nombres exactos según tus archivos descargados
+   font-display: swap evita FOIT (Flash of Invisible Text)
+--------------------------------------------- */
+
+/* Inter · Fuente variable (contiene todos los pesos 100-900) */
+@font-face {
+    font-family: 'Inter';
+    src: url('../font/inter-variable.woff2') format('woff2');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Crimson Text · Regular (400) */
+@font-face {
+    font-family: 'Crimson Text';
+    src: url('../font/CrimsonText-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Crimson Text · SemiBold (600) */
+@font-face {
+    font-family: 'Crimson Text';
+    src: url('../font/CrimsonText-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Crimson Text · Bold (700) */
+@font-face {
+    font-family: 'Crimson Text';
+    src: url('../font/CrimsonText-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}

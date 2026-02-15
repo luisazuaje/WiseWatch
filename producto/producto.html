@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submariner Date · Detalle | WiseWatch</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/output.css">
+</head>
+
+<body>
+
+    <!-- ========== HEADER (idéntico a index.html) ========== -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-3">
+                    <div class="monogram">WW</div>
+                    <div>
+                        <h1 class="brand-logo text-2xl">WiseWatch</h1>
+                        <p class="text-xs text-gray-500">Curaduría de Horología Alternativa</p>
+                    </div>
+                </div>
+                <nav class="hidden md:block">
+                    <ul class="flex space-x-8">
+                        <li><a href="index.html#home" class="font-medium hover:text-amber-800 transition">Inicio</a>
+                        </li>
+                        <li><a href="catalogo.html" class="font-medium hover:text-amber-800 transition">Catálogo</a>
+                        </li>
+                        <li><a href="index.html#filosofia"
+                                class="font-medium hover:text-amber-800 transition">Filosofía</a></li>
+                        <li><a href="index.html#pilares" class="font-medium hover:text-amber-800 transition">Pilares</a>
+                        </li>
+                        <li><a href="index.html#contacto"
+                                class="font-medium hover:text-amber-800 transition">Contacto</a></li>
+                    </ul>
+                </nav>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-700">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+            <!-- Menú móvil -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                <ul class="space-y-3">
+                    <li><a href="index.html#home" class="block font-medium hover:text-amber-800 transition">Inicio</a>
+                    </li>
+                    <li><a href="catalogo.html" class="block font-medium hover:text-amber-800 transition">Catálogo</a>
+                    </li>
+                    <li><a href="index.html#filosofia"
+                            class="block font-medium hover:text-amber-800 transition">Filosofía</a></li>
+                    <li><a href="index.html#pilares"
+                            class="block font-medium hover:text-amber-800 transition">Pilares</a></li>
+                    <li><a href="index.html#contacto"
+                            class="block font-medium hover:text-amber-800 transition">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- ========== PAN DE MIGA ========== -->
+    <div class="container mx-auto px-4 py-6 text-sm text-gray-500">
+        <a href="../index.html" class="hover:text-amber-800">Inicio</a> <span class="mx-2">/</span>
+        <a href="../seccion/catalogo.html" class="hover:text-amber-800">Catálogo</a> <span class="mx-2">/</span>
+        <span class="text-gray-800 font-medium">Submariner Date</span>
+    </div>
+
+    <!-- ========== SECCIÓN DETALLE PRODUCTO ========== -->
+    <section class="py-6 md:py-10 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden p-6 md:p-8">
+                <!-- GRID PRINCIPAL: IMÁGENES + INFO RÁPIDA -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+                    <!-- COLUMNA IZQUIERDA: GALERÍA -->
+                    <div>
+                        <!-- Imagen grande principal -->
+                        <div
+                            class="rounded-lg overflow-hidden bg-gray-100 mb-4 flex items-center justify-center h-80 md:h-96">
+                            <img id="mainImage"
+                                src="https://www.agjoyeria.com/img-rolex/watches-models/m126610ln-0001-drp-upright-bba-with-shadow-landscape.webp"
+                                alt="Submariner Date - WiseWatch Homage"
+                                class="max-h-full max-w-full object-contain scale-125">
+                        </div>
+                        <!-- Miniaturas -->
+                        <div class="grid grid-cols-4 gap-3">
+                            <div class="thumbnail active rounded-md overflow-hidden border-2 border-[#c9a86a] h-20 bg-gray-100 flex items-center justify-center p-1"
+                                onclick="changeImage(this, 'https://www.agjoyeria.com/img-rolex/watches-models/m126610ln-0001-drp-upright-bba-with-shadow-landscape.webp')">
+                                <img src="https://www.agjoyeria.com/img-rolex/watches-models/m126610ln-0001-drp-upright-bba-with-shadow-landscape.webp"
+                                    class="max-h-full max-w-full object-contain">
+                            </div>
+                            <div class="thumbnail rounded-md overflow-hidden border-2 border-transparent h-20 bg-gray-100 flex items-center justify-center p-1"
+                                onclick="changeImage(this, 'https://images.unsplash.com/photo-1547996160-81dfa63595aa?w=500&auto=format&fit=crop')">
+                                <img src="https://images.unsplash.com/photo-1547996160-81dfa63595aa?w=500&auto=format&fit=crop"
+                                    class="max-h-full max-w-full object-contain">
+                            </div>
+                            <div class="thumbnail rounded-md overflow-hidden border-2 border-transparent h-20 bg-gray-100 flex items-center justify-center p-1"
+                                onclick="changeImage(this, 'https://images.unsplash.com/photo-1623998021633-08f9d6f94f8b?w=500&auto=format&fit=crop')">
+                                <img src="https://images.unsplash.com/photo-1623998021633-08f9d6f94f8b?w=500&auto=format&fit=crop"
+                                    class="max-h-full max-w-full object-contain">
+                            </div>
+                            <div class="thumbnail rounded-md overflow-hidden border-2 border-transparent h-20 bg-gray-100 flex items-center justify-center p-1"
+                                onclick="changeImage(this, 'https://images.unsplash.com/photo-1612776573271-dacc14cc67e5?w=500&auto=format&fit=crop')">
+                                <img src="https://images.unsplash.com/photo-1612776573271-dacc14cc67e5?w=500&auto=format&fit=crop"
+                                    class="max-h-full max-w-full object-contain">
+                            </div>
+                        </div>
+                        <p class="text-xs text-gray-400 mt-3 text-center">* Imágenes ilustrativas. El producto real
+                            puede presentar ligeras variaciones.</p>
+                    </div>
+
+                    <!-- COLUMNA DERECHA: INFO COMPRA Y CARACTERÍSTICAS CLAVE -->
+                    <div>
+                        <!-- Título y precio -->
+                        <div class="flex flex-wrap justify-between items-start mb-4">
+                            <h2 class="text-3xl md:text-4xl font-bold">Submariner Date</h2>
+                            <span class="text-3xl font-bold text-[#c9a86a]">$299</span>
+                        </div>
+                        <p class="text-gray-600 text-lg mb-6">Homenaje de alta fidelidad al icónico buceador.
+                            Fidelidad estética, rendimiento confiable, precio inteligente.</p>
+
+                        <!-- Especificaciones rápidas con iconos -->
+                        <div class="grid grid-cols-2 gap-y-4 gap-x-2 mb-6 bg-gray-50 p-5 rounded-lg">
+                            <div class="flex items-center">
+                                <i class="fas fa-cog gold-accent text-xl w-7"></i>
+                                <div>
+                                    <p class="text-xs text-gray-500">Movimiento</p>
+                                    <p class="font-medium">Seiko NH35 (Automático)</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-tint gold-accent text-xl w-7"></i>
+                                <div>
+                                    <p class="text-xs text-gray-500">Resistencia</p>
+                                    <p class="font-medium">200 m / 660 ft</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-gem gold-accent text-xl w-7"></i>
+                                <div>
+                                    <p class="text-xs text-gray-500">Cristal</p>
+                                    <p class="font-medium">Zafiro (dureza 9)</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-weight gold-accent text-xl w-7"></i>
+                                <div>
+                                    <p class="text-xs text-gray-500">Caja</p>
+                                    <p class="font-medium">Acero 316L · 40mm</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-sync gold-accent text-xl w-7"></i>
+                                <div>
+                                    <p class="text-xs text-gray-500">Bisel</p>
+                                    <p class="font-medium">Cerámico unidireccional</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-clock gold-accent text-xl w-7"></i>
+                                <div>
+                                    <p class="text-xs text-gray-500">Reserva de marcha</p>
+                                    <p class="font-medium">41 horas</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Lista de destacados -->
+                        <ul class="space-y-2 mb-7">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle gold-accent mt-1 mr-3"></i>
+                                <span><span class="font-semibold">Luminova C3 Super</span> – legibilidad nocturna
+                                    superior.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle gold-accent mt-1 mr-3"></i>
+                                <span><span class="font-semibold">Brazalete macizo Oyster</span> con cierre de seguridad
+                                    y extensión Glidelock.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle gold-accent mt-1 mr-3"></i>
+                                <span><span class="font-semibold">Corona roscada</span> con doble sistema de
+                                    estanqueidad.</span>
+                            </li>
+                        </ul>
+
+                        <!-- Botones de acción -->
+                        <div class="flex flex-col sm:flex-row gap-4 mt-4">
+                            <a href="#"
+                                onclick="alert('Gracias por su interés. Será redirigido a nuestro socio de confianza.'); return false;"
+                                class="flex-1 btn-affiliate text-center py-3 px-6 rounded-lg font-bold text-lg transition flex items-center justify-center">
+                                <i class="fas fa-cart-shopping mr-2"></i> Comprar ahora
+                            </a>
+                            <a href="rolex.com"
+                                onclick="alert('Rolex Submariner Date ref. 126610LN · Movimiento 3235 · Acero 904L · ~$9.000+'); return false;"
+                                class="flex-1 bg-white border-2 border-amber-700 text-amber-800 hover:bg-amber-50 py-3 px-6 rounded-lg font-bold text-lg transition flex items-center justify-center">
+                                <i class="fas fa-crown mr-2"></i> Ver original
+                            </a>
+                        </div>
+                        <p class="text-xs text-gray-400 mt-4"><i class="fas fa-shield-alt gold-accent mr-1"></i> Envío
+                            seguro · Devolución de 30 días · 2 años de garantía</p>
+                    </div>
+                </div> <!-- fin grid principal -->
+
+                <!-- ===== LÍNEA DIVISORIA ===== -->
+                <div class="my-12 border-t border-gray-200"></div>
+
+                <!-- ===== FICHA TÉCNICA COMPLETA ===== -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                    <div>
+                        <h3 class="text-2xl font-bold mb-6 flex items-center">
+                            <i class="fas fa-microchip gold-accent mr-3"></i> Especificaciones técnicas
+                        </h3>
+                        <table class="w-full text-sm">
+                            <tr class="border-b border-gray-200">
+                                <td class="py-3 font-semibold text-gray-600">Movimiento</td>
+                                <td class="py-3">Seiko NH35 (Automático, 21,600 bph, 24 rubíes)</td>
+                            </tr>
+                            <tr class="border-b border-gray-200">
+                                <td class="py-3 font-semibold text-gray-600">Caja</td>
+                                <td class="py-3">Acero inoxidable 316L, 40 mm de diámetro, 13 mm de grosor</td>
+                            </tr>
+                            <tr class="border-b border-gray-200">
+                                <td class="py-3 font-semibold text-gray-600">Bisel</td>
+                                <td class="py-3">Cerámico negro, inserción unidireccional con 120 clics</td>
+                            </tr>
+                            <tr class="border-b border-gray-200">
+                                <td class="py-3 font-semibold text-gray-600">Cristal</td>
+                                <td class="py-3">Zafiro con tratamiento antirreflejos en el interior</td>
+                            </tr>
+                            <tr class="border-b border-gray-200">
+                                <td class="py-3 font-semibold text-gray-600">Esfera</td>
+                                <td class="py-3">Negra lacada, índices aplicados con luminova C3</td>
+                            </tr>
+                            <tr class="border-b border-gray-200">
+                                <td class="py-3 font-semibold text-gray-600">Brazalete</td>
+                                <td class="py-3">Acero 316L, eslabones sólidos, cierre desplegable con extensión</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 font-semibold text-gray-600">Hermeticidad</td>
+                                <td class="py-3">200 m (20 ATM) – válido para buceo profesional</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold mb-6 flex items-center">
+                            <i class="fas fa-ruler gold-accent mr-3"></i> Dimensiones y accesorios
+                        </h3>
+                        <table class="w-full text-sm">
+                            <tr class="border-b border-gray-200">
+                                <td class="py-3 font-semibold text-gray-600">Diámetro</td>
+                                <td class="py-3">40 mm (sin corona)</td>
+                            </tr>
+                            <tr class="border-b border-gray-200">
+                                <td class="py-3 font-semibold text-gray-600">Distancia entre asas</td>
+                                <td class="py-3">20 mm</td>
+                            </tr>
+                            <tr class="border-b border-gray-200">
+                                <td class="py-3 font-semibold text-gray-600">Grosor</td>
+                                <td class="py-3">13 mm</td>
+                            </tr>
+                            <tr class="border-b border-gray-200">
+                                <td class="py-3 font-semibold text-gray-600">Peso aproximado</td>
+                                <td class="py-3">160 g (con brazalete completo)</td>
+                            </tr>
+                            <tr class="border-b border-gray-200">
+                                <td class="py-3 font-semibold text-gray-600">Incluye</td>
+                                <td class="py-3">Caja de presentación WiseWatch, manual, tarjeta de garantía</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 font-semibold text-gray-600">Garantía</td>
+                                <td class="py-3">2 años (movimiento y mano de obra)</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- ===== SECCIÓN: GLORIA AL ORIGINAL + COMPARATIVA ===== -->
+                <div class="mt-14 bg-amber-50/30 rounded-xl p-6 md:p-8 border border-amber-100">
+                    <div class="text-center mb-8">
+                        <i class="fas fa-crown text-4xl gold-accent mb-2"></i>
+                        <h3 class="text-3xl font-bold">El ícono que lo inspiró: Rolex Submariner Date</h3>
+                        <div class="section-divider w-20"></div>
+                        <p class="text-gray-700 max-w-3xl mx-auto mt-4">
+                            Desde 1953, el Rolex Submariner no solo definió el reloj de buceo moderno; creó una leyenda.
+                            Su corona de rosca, su bisel unidireccional y su robustez se convirtieron en el estándar de
+                            la industria.
+                            Poseer un Rolex no es solo tener un instrumento, es formar parte de la historia de la
+                            relojería.
+                        </p>
+                    </div>
+
+                    <!-- TABLA COMPARATIVA LADO A LADO -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+                        <!-- Columna: WiseWatch Homage -->
+                        <div class="bg-white p-5 rounded-lg shadow-sm">
+                            <div class="flex items-center mb-4">
+                                <div class="monogram w-10 h-10 text-sm mr-3">WW</div>
+                                <h4 class="text-xl font-bold">WiseWatch Submariner</h4>
+                            </div>
+                            <table class="comparison-table w-full text-sm">
+                                <tr>
+                                    <td class="font-semibold">Movimiento</td>
+                                    <td>Seiko NH35 (automático)</td>
+                                </tr>
+                                <tr>
+                                    <td class="font-semibold">Reserva de marcha</td>
+                                    <td>41 horas</td>
+                                </tr>
+                                <tr>
+                                    <td class="font-semibold">Acero</td>
+                                    <td>316L</td>
+                                </tr>
+                                <tr>
+                                    <td class="font-semibold">Bisel</td>
+                                    <td>Cerámico</td>
+                                </tr>
+                                <tr>
+                                    <td class="font-semibold">Cristal</td>
+                                    <td>Zafiro</td>
+                                </tr>
+                                <tr>
+                                    <td class="font-semibold">Hermeticidad</td>
+                                    <td>200 m</td>
+                                </tr>
+                                <tr>
+                                    <td class="font-semibold">Precio</td>
+                                    <td><span class="text-xl font-bold text-[#c9a86a]">$299</span></td>
+                                </tr>
+                            </table>
+                            <p class="text-xs text-gray-500 mt-3">* Homenaje legal, no falsificación. Diseño inspirado.
+                            </p>
+                        </div>
+                        <!-- Columna: Rolex Original -->
+                        <div class="bg-white p-5 rounded-lg shadow-sm border-2 border-amber-200">
+                            <div class="flex items-center mb-4">
+                                <i class="fas fa-crown text-2xl gold-accent mr-3"></i>
+                                <h4 class="text-xl font-bold">Rolex Submariner Date</h4>
+                            </div>
+                            <table class="comparison-table w-full text-sm">
+                                <tr>
+                                    <td class="font-semibold">Movimiento</td>
+                                    <td>Rolex 3235 (COSC, Superlative Chronometer)</td>
+                                </tr>
+                                <tr>
+                                    <td class="font-semibold">Reserva de marcha</td>
+                                    <td>70 horas</td>
+                                </tr>
+                                <tr>
+                                    <td class="font-semibold">Acero</td>
+                                    <td>Oystersteel 904L</td>
+                                </tr>
+                                <tr>
+                                    <td class="font-semibold">Bisel</td>
+                                    <td>Cerachrom (cerámica patentada)</td>
+                                </tr>
+                                <tr>
+                                    <td class="font-semibold">Cristal</td>
+                                    <td>Zafiro con lente Cyclops</td>
+                                </tr>
+                                <tr>
+                                    <td class="font-semibold">Hermeticidad</td>
+                                    <td>300 m</td>
+                                </tr>
+                                <tr>
+                                    <td class="font-semibold">Precio (nuevo)</td>
+                                    <td><span class="text-xl font-bold text-gray-800">~$9.650 USD</span></td>
+                                </tr>
+                            </table>
+                            <p class="text-xs text-gray-500 mt-3">* Referencia 126610LN. Manufactura suiza,
+                                certificación oficial.</p>
+                        </div>
+                    </div>
+                    <p class="text-center text-gray-600 mt-8 text-sm bg-white p-4 rounded-lg italic">
+                        “WiseWatch celebra la obra maestra de Rolex ofreciendo una puerta de entrada estética y
+                        funcional.
+                        No reemplaza al original; lo homenajea y lo hace accesible para el día a día sin renunciar al
+                        estilo.”
+                    </p>
+                </div>
+
+                <!-- ===== FILOSOFÍA / BEATER WATCH ===== -->
+                <div class="mt-12 bg-gray-900 text-white p-6 md:p-8 rounded-xl">
+                    <div class="flex flex-col md:flex-row items-center gap-6">
+                        <div
+                            class="w-20 h-20 bg-[#c9a86a]/20 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-shield-hammer text-4xl gold-accent"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-2xl font-bold mb-2">El beater watch inteligente</h4>
+                            <p class="text-gray-300">
+                                Este reloj está diseñado para ser usado sin miedo. Viajes, deportes, entornos de trabajo
+                                exigentes o simplemente
+                                el día a día en la ciudad. Mantienes la proyección de estilo que buscas, sin exponer un
+                                activo de cinco cifras.
+                                Una decisión racional, estética y estratégica.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ===== SUGERENCIA: OTROS MODELOS (OPCIONAL) ===== -->
+                <div class="mt-14">
+                    <h3 class="text-2xl font-bold mb-6 text-center">También podría interesarte</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <!-- Miniatura GMT -->
+                        <a href="#" class="watch-card bg-white p-3 rounded-lg shadow text-center">
+                            <img src="https://gsbazzi.com/rolex-watch-assets/2025/upright_watch_assets_landscape/m126710blnr-0003.webp"
+                                class="h-20 mx-auto object-contain mb-2">
+                            <p class="font-bold text-sm">GMT Batman</p>
+                            <span class="text-[#c9a86a]">$359</span>
+                        </a>
+                        <!-- Miniatura Daytona -->
+                        <a href="#" class="watch-card bg-white p-3 rounded-lg shadow text-center">
+                            <img src="https://gsbazzi.com/rolex-watch-assets/2025/upright_watch_assets_landscape/m126500ln-0001.webp"
+                                class="h-20 mx-auto object-contain mb-2">
+                            <p class="font-bold text-sm">Daytona</p>
+                            <span class="text-[#c9a86a]">$429</span>
+                        </a>
+                        <!-- Miniatura Explorer -->
+                        <a href="#" class="watch-card bg-white p-3 rounded-lg shadow text-center">
+                            <img src="https://gsbazzi.com/rolex-watch-assets/2025/upright_watch_assets_landscape/m124270-0001.webp"
+                                class="h-20 mx-auto object-contain mb-2">
+                            <p class="font-bold text-sm">Explorer 36</p>
+                            <span class="text-[#c9a86a]">$269</span>
+                        </a>
+                        <!-- Miniatura Hulk -->
+                        <a href="#" class="watch-card bg-white p-3 rounded-lg shadow text-center">
+                            <img src="https://www.agjoyeria.com/img-rolex/watches-models/m126610lv-0002-drp-upright-bba-with-shadow-landscape.webp"
+                                class="h-20 mx-auto object-contain mb-2">
+                            <p class="font-bold text-sm">Hulk</p>
+                            <span class="text-[#c9a86a]">$315</span>
+                        </a>
+                    </div>
+                </div>
+            </div> <!-- fin bg-white -->
+        </div> <!-- fin container -->
+    </section>
+
+    <!-- ========== FOOTER (mismo estilo) ========== -->
+    <footer class="bg-white border-t border-gray-200 py-8 mt-10">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex justify-center items-center space-x-3 mb-4">
+                <div class="monogram w-12 h-12 text-xl">WW</div>
+                <span class="brand-logo text-xl">WiseWatch</span>
+            </div>
+            <p class="text-gray-500 text-sm">Catálogo de homenajes Rolex · Curaduría profesional</p>
+            <p class="text-gray-400 text-xs mt-4">© 2025 WiseWatch. Todos los modelos son homenajes legales, no
+                falsificaciones. Este sitio utiliza enlaces de afiliado.</p>
+        </div>
+    </footer>
+
+    <!-- ========== JAVASCRIPT (menú móvil + cambio de imagen) ========== -->
+    <script>
+        // --- Menú móvil (idéntico a index) ---
+        document.addEventListener('DOMContentLoaded', function () {
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', function () {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+
+            // Smooth scroll para anclas (si existen)
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    const href = this.getAttribute('href');
+                    if (href === '#') return;
+                    const target = document.querySelector(href);
+                    if (target) {
+                        e.preventDefault();
+                        window.scrollTo({ top: target.offsetTop - 80, behavior: 'smooth' });
+                        if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                            mobileMenu.classList.add('hidden');
+                        }
+                    }
+                });
+            });
+        });
+
+        // --- Cambio de imagen principal al hacer clic en miniatura ---
+        function changeImage(element, imgSrc) {
+            // Actualizar imagen grande
+            document.getElementById('mainImage').src = imgSrc;
+            // Quitar clase active de todas las miniaturas
+            const thumbs = document.querySelectorAll('.thumbnail');
+            thumbs.forEach(thumb => {
+                thumb.classList.remove('active', 'border-[#c9a86a]');
+                thumb.classList.add('border-transparent');
+            });
+            // Activar la miniatura clickeada
+            element.classList.remove('border-transparent');
+            element.classList.add('active', 'border-[#c9a86a]');
+        }
+    </script>
+</body>
+
+</html>
